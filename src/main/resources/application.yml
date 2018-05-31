@@ -26,6 +26,9 @@ spring:
     expose-spring-macro-helpers: false  
     suffix: .ftl  
     template-loader-path: classpath:/templates
+
+logging:
+    config: classpath:config/logback.xml
 #mybatis
 mybatis:
     type-aliases-package: com.mocheng.demo.model
