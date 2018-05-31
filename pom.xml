@@ -81,12 +81,11 @@
 			<version>RELEASE</version>
 		</dependency>
 
-		<!-- jfinal 模版语言 -->
-		<dependency>
-			<groupId>com.jfinal</groupId>
-			<artifactId>enjoy</artifactId>
-			<version>3.3</version>
-		</dependency>
+		<!-- freemarker 模版语言 -->
+	<dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-freemarker</artifactId>
+    </dependency> 
 
 		<dependency>
 			<groupId>com.alibaba</groupId>
