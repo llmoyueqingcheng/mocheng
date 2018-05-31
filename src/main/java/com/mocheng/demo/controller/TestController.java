@@ -1,12 +1,17 @@
 package com.mocheng.demo.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.mocheng.demo.model.StudentModel;
 import com.mocheng.demo.service.TestService;
 
-@RestController
+@Controller
 public class TestController {
 	
 	@Autowired
@@ -21,4 +26,11 @@ public class TestController {
 		testService.TestMybatis();
 		System.out.println("执行完成");
 	}
+	@RequestMapping("/list")
+	public String getList(HttpServletRequest req) {
+		List<StudentModel> list = testService.getList();
+		req.setAttribute("studentList", list);
+		return "studentList";
+	}
+	
 }
