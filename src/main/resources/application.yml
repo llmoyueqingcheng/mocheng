@@ -15,6 +15,17 @@ spring:
     encoding.force: true
   aop:
     proxy-target-class: true
+# activemq
+  activemq:
+    broker-url: tcp://59.110.232.192:61616
+    user: admin
+    password: :admin
+    in-memory: true
+    pool:
+        enabled: false
+    packages:
+        trust-all: true
+
 #mybatis
 mybatis:
     type-aliases-package: com.mocheng.demo.model
@@ -24,4 +35,6 @@ pagehelper:
     reasonable: true
     supportMethodsArguments: true
     params: count=countSql
+    spring: 
+
     
