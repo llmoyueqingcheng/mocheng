@@ -15,6 +15,8 @@ public class MochengApplication extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+		//修改主分支
+
 		return builder.sources(MochengApplication.class);
 	}
 	
